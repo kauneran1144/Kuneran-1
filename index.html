@@ -1,1 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Resmi Desa Kauneran 1</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Konfigurasi Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'kauneran-primary': '#10b981',
+                        'kauneran-secondary': '#059669',
+                        'kauneran-accent': '#fde047',
+                        'kauneran-bg': '#f9fafb',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- File CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans bg-kauneran-bg">
+
+    <!-- Navigasi -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#home" class="flex-shrink-0 flex items-center">
+                    <span class="text-xl font-bold text-kauneran-secondary">Desa Kauneran 1</span>
+                </a>
+
+                <!-- Menu Desktop -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="nav-link">Beranda</a>
+                        <a href="#profil" class="nav-link">Profil Desa</a>
+                        <a href="#sejarah" class="nav-link">Sejarah</a>
+                        <a href="#data" class="nav-link">Data</a>
+                        <a href="#peta" class="nav-link">Peta </a>
+                    </div>
+                </div>
+
+                <!-- Tombol Menu Mobile -->
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobile-menu-button" type="button" class="mobile-menu-btn" aria-controls="mobile-menu" aria-expanded="false">
+                        <svg id="icon-burger" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="mobile-link">Beranda</a>
+                <a href="#profil" class="mobile-link">Profil Desa</a>
+                <a href="#sejarah" class="mobile-link">Sejarah</a>
+                <a href="#data" class="mobile-link">Data</a>
+                <a href="#peta" class="mobile-link">Peta & Sosmed</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="home" class="hero-bg">
+        <div class="bg-black bg-opacity-40 p-10 rounded-xl max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4 tracking-tight">
+                Selamat Datang di
+            </h1>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-kauneran-accent mb-6">
+                Desa Kauneran 1
+            </h2>
+            <p class="text-xl text-white">
+                "Maju Bersama, Sejahtera Untuk Semua"
+            </p>
+            <div class="mt-8">
+                <a href="#profil" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-kauneran-secondary bg-kauneran-accent hover:bg-yellow-400 transition duration-300 transform hover:scale-105">
+                    Jelajahi Lebih Lanjut
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Konten Utama -->
+    <main>
+        <!-- Profil -->
+        <section id="profil" class="section-padding bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">PROFIL DESA</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Desa Kauneran terletak di kaki bukit yang subur, menjadikannya salah satu lumbung pertanian utama di wilayah ini. Mayoritas penduduk Kauneran bermata pencaharian sebagai petani dan pekebun, dengan komoditas unggulan seperti cengkeh, pala, dan hasil bumi
+                            lainnya.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Kauneran berkomitmen untuk menjadi desa yang mandiri, bersih, dan berwawasan lingkungan, dengan fokus pada pengembangan pariwisata berbasis alam dan budaya lokal.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/600x400/10b981/ffffff?text=Potret+Warga+Kauneran" alt="Potret Warga Desa Kauneran" class="rounded-xl shadow-2xl w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sejarah -->
+        <section id="sejarah" class="section-padding bg-kauneran-bg">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">SEJARAH DESA</h2>
+                <div class="bg-white p-8 rounded-xl shadow-2xl">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Desa Kauneran 1 terletak di Kecamatan Sonder, Kabupaten Minahasa, Provinsi Sulawesi Utara, dengan luas wilayah sekitar 151 km² yang subur dan didominasi dataran serta perbukitan. Sebelum tahun 1952, wilayah ini dikenal dengan nama Kolongan Bawah, yang
+                        berarti “di bawah jajaran Puser In Tana Gunung Lengkoan.” Istilah tersebut melambangkan posisi strategis kawasan ini sebagai pusat tanah di antara pegunungan. Nama Kauneran berasal dari kata “UNER” dalam Bahasa Minahasa yang berarti
+                        “di tengah,” menggambarkan posisi sentral desa di antara wilayah lain di Kecamatan Sonder. Pemekaran pertama terjadi pada 1952, ketika Kolongan Bawah dimekarkan menjadi Desa Sendangan dan Desa Kauneran. Kemudian, pada 2008, Desa
+                        Kauneran kembali dimekarkan menjadi Kauneran (induk) dan Kauneran 1, untuk meningkatkan pelayanan publik dan pemerataan pembangunan.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Saat ini, Desa Kauneran 1 berpenduduk sekitar 1.215 jiwa dengan mata pencaharian utama di bidang pertanian, perkebunan, dan peternakan, terutama cengkeh, cabe, jagung, dan babi. Kepala desa pertama, Bapak Dioni Walukow (alm), dikenal sebagai tokoh yang
+                        memimpin masa transisi dan meletakkan dasar pembangunan pasca-pemekaran. Desa ini juga memiliki kekayaan budaya yang masih dijaga melalui tradisi dan situs-situs budaya lokal. Pemerintah desa berkomitmen melestarikan nilai-nilai
+                        budaya Minahasa sekaligus mendorong pembangunan yang berkelanjutan demi peningkatan kesejahteraan masyarakat. Dengan posisi strategis dan kekayaan tradisinya, Desa Kauneran 1 menjadi pusat kegiatan sosial dan simbol identitas budaya
+                        masyarakat Minahasa.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 5. DATA JUMLAH PENDUDUK, KK, & LUAS DAERAH -->
+    <section id="data" class="section-padding bg-kauneran-primary">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+            <h2 class="text-4xl font-extrabold text-center text-kauneran-accent mb-12 border-b-4 border-kauneran-accent pb-2">DATA DESA KAUNERAN</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+
+                <!-- Data 1: Jumlah Penduduk -->
+                <div class="bg-white text-kauneran-secondary p-8 rounded-xl shadow-2xl transform hover:scale-105 transition duration-300">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-kauneran-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20v-2c0-.653-.254-1.294-.744-1.784l-1.422-1.422m-2.582-2.582A5 5 0 0013.5 12c.732 0 1.458.17 2.115.496m-2.115 0a8 8 0 01-3.885 0c.657-.326 1.383-.496 2.115-.496zM12 12a3 3 0 00-3-3H6a3 3 0 00-3 3v2a3 3 0 003 3h3a3 3 0 003-3v-2z"></path></svg>
+                    <p class="text-sm font-medium">Jumlah Penduduk (Total)</p>
+                    <!-- [GANTI INI] DATA JUMLAH PENDUDUK -->
+                    <p class="text-5xl font-extrabold mt-2"> 1215</p>
+                    <!-- [GANTI INI] DETAIL PENDUDUK -->
+                    <p class="text-xs mt-1">Laki-laki: 633 | Perempuan: 582</p>
+                    <p class="text-xs mt-1">KK : 431 </p>
+                </div>
+
+                <!-- Data 2: Jumlah KK -->
+                <div class="bg-white text-kauneran-secondary p-8 rounded-xl shadow-2xl transform hover:scale-105 transition duration-300">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-kauneran-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    <p class="text-sm font-medium">Jumlah Kepala Keluarga</p>
+                    <!-- [GANTI INI] DATA JUMLAH KK -->
+                    <p class="text-5xl font-extrabold mt-2">512</p>
+                    <!-- [GANTI INI] DETAIL TAHUN DATA -->
+                    <p class="text-xs mt-1">Data per Tahun 2024</p>
+                </div>
+
+                <!-- Data 3: Luas Daerah -->
+                <div class="bg-white text-kauneran-secondary p-8 rounded-xl shadow-2xl transform hover:scale-105 transition duration-300">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-kauneran-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243m10.606 0L19.5 21M4.5 21l-1.06-1.06m0 0a9 9 0 010-12.728l4.243-4.243m12.728 0l-4.243 4.243m4.243-4.243a9 9 0 010 12.728M17.657 16.657L19.5 21"></path></svg>
+                    <p class="text-sm font-medium">Luas Daerah</p>
+                    <!-- [GANTI INI] DATA LUAS DAERAH (ANGKA) -->
+                    <p class="text-5xl font-extrabold mt-2">294 ,00 Ha</p>
+                    <!-- [GANTI INI] DETAIL LUAS DAERAH -->
+                    <p class="text-xs mt-1">Km² (Sawah: 77 ha 26.19% Tanah Kering: 125 ha 42.52% Tanah Basah: 3 ha 1.02% Perkebunan: 70 ha 23.81% Fasilitas Umum: 19 ha 6.46% Hutan: 0 ha 0.00%)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- 6. PETA DESA -->
+    <section id="peta" class="section-padding bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-center text-kauneran-secondary mb-12 border-b-4 border-kauneran-primary pb-2">LOKASI</h2>
+
+            <div class="grid md:grid-cols-2 gap-12">
+
+                <!-- Peta Desa -->
+                <div class="md:col-span-1">
+                    <h3 class="text-2xl font-bold text-kauneran-secondary mb-4">Peta Desa (Google Maps)</h3>
+                    <div class="rounded-xl shadow-2xl overflow-hidden aspect-video">
+                        <!-- [GANTI INI] URL EMBED MAPS DESA KAUNERAN YANG SEBENARNYA -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15957.51263098553!2d124.96541675!3d1.2452358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32877a7b8e5c1d11%3A0x6b9c9b1f7d2946c7!2sKauneran%2C%20Kec.%20Kawangkoan%20Utara%2C%20Kabupaten%20Minahasa%2C%20Sulawesi%20Utara!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+
+
+                <!-- Footer -->
+                <footer class="bg-kauneran-secondary text-white py-8 text-center">
+                    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <p class="mb-2">&copy; 2024 Desa Kauneran. Hak Cipta Dilindungi.</p>
+                        <p class="text-sm">Pemerintah Desa Kauneran, Kecamatan [Nama Kecamatan Mock], Kabupaten [Nama Kabupaten Mock]</p>
+                        <p class="text-sm mt-1">Email: info@kauneran.desa.id | Telp: (0431) xxxxxxx</p>
+                    </div>
+                </footer>
+
+                <!-- File JS eksternal -->
+                <script src="script.js"></script>
+</body>
+
+</html>
